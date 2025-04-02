@@ -6,7 +6,9 @@ if(isset($_GET["id"])){
     $sql = "DELETE FROM task WHERE id=$id";
     if ($conn->query($sql) === TRUE) {
         echo "Record deleted successfully";
-        header('Location: '.'/');
+        $script_dir = dirname($_SERVER['SCRIPT_NAME']);
+        header('Location: '.$script_dir);
+        exit();
       } else {
         echo "Error deleting record: " . $conn->error;
       }

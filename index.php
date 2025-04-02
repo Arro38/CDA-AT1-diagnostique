@@ -55,11 +55,11 @@ $conn->close();
           </li>
           <script>
 
-    const li = document.getElementById(<?=$row["id"] ?>);
-    const editbutton = document.getElementById("edit<?= $row["id"]?>");
-    editbutton.addEventListener("click",()=>{
+    let li<?=$row["id"] ?> = document.getElementById(<?=$row["id"] ?>);
+    let editbutton<?=$row["id"] ?> = document.getElementById("edit<?= $row["id"]?>");
+    editbutton<?=$row["id"] ?>.addEventListener("click",()=>{
         form1.style.display = "none";
-        li.innerHTML = `<form method="post">
+        li<?=$row["id"] ?>.innerHTML = `<form method="post">
         <input type="hidden" name="id" value="<?=$row["id"]?>"/>
       <input type="text" name="update" value="<?=$row["name"]?>"  />
       <button>Update</button>
