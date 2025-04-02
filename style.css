@@ -1,0 +1,39 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+.main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 10px;
+}
+
+button{
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    &:hover{
+        background:black;
+        color:white;
+    }
+}
+
+button.edit{
+    &:hover{
+        background:white;
+    }
+}
+
+input{
+    padding: 10px 20px;
+}
+
+li{
+    list-style: none;
+    margin:10px
+}
+
